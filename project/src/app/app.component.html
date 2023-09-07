@@ -1,0 +1,22 @@
+  <div class="example-box bg-body-secondary" cdkDrag>
+  Drag me around
+</div>
+<div cdkDropList class="drop-list" (cdkDropListDropped)="onDrop($event)">
+  completed
+  <div *ngFor="let item of items" cdkDrag class="drag-item">
+     completed {{ item }}
+  </div>
+  incompleted
+  <div *ngFor="let item of items" cdkDrag class="drag-item">
+   inclometed {{ item }}
+  </div>
+</div>
+<div cdkDrag>drag it </div> 
+<app-component></app-component>
+<app-forms></app-forms>
+
+<button (click)="buttonclick()">button click</button>
+<app-crud></app-crud>
+<div cdkDrag>dragme</div>
+<input type="date" [(ngModel)]="selectedDate">
+<p>Selected Date: {{ selectedDate | date: 'dd/MM/yyyy' }}</p>

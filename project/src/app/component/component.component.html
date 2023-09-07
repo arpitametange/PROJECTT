@@ -1,0 +1,9 @@
+<p>component works!</p>
+<div cdkDrag>drag me!</div>
+
+<div cdkDropList (cdkDropListDropped)="drag($event)">
+    <div cdkDrag *ngFor="let t of items">{{t}}</div>
+</div>
+
+<select name="" id="" (change)="clickfun($event)"><option value="{{t.id}}" *ngFor="let t of country">{{t.name}}</option></select>
+<div><select name="" id=""><option value="{{k.id}}" *ngFor="let k of state">{{k.name}}</option></select></div>

@@ -1,0 +1,19 @@
+<!-- <p>edit works!</p> -->
+<div class="container">
+    <h2 mat-dialog-title style="font-family: 'Abril Fatface', cursive; padding-left:50px ; color: brown;">Edit data</h2>
+<div class="shadow">
+    <div>
+     <div> 
+        <label for="" style="color: blueviolet; font-size: large; font-weight: bold;">EDIT DATA</label>
+      <div>  <input type="input" matInput placeholder="" [value]="myData.data"  #task></div> </div>
+        <label for="" style="color: rgb(220, 43, 226); font-size: large; font-weight: bold;">EDIT ID</label>
+<div>        <input type="input" matInput placeholder="" [value]="myData.id"  #id>
+</div>        <div class='my-3'>
+        <button class="btn btn-info" (click)="update(task.value,id.value)"  mat-button [mat-dialog-close]="true">update</button>
+        <button class="btn btn-dark" mat-button [mat-dialog-close]="false">cancel</button>
+    </div>
+    </div>
+</div>
+
+</div>
+

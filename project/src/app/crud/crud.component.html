@@ -1,0 +1,18 @@
+<div class="container">
+    <label for="" class="text-bg-success ">CRUD OPERATION</label>
+    <div class="shadow">
+<div class="justify-content-center">
+<div style="display: flex; flex-direction: column;" class="container">
+<input type="text" #data style="width: 400px ; margin-left: 252px;">
+<button (click)="add(data.value)" class="text-bg-dark " style="width: 200px ; margin-left: 352px;">Add data</button>
+</div>
+
+<table class="table-bordered table-hover mx-3 my-2 "><thead><tr><th>Data</th><th>Id</th><th>Actions</th></tr></thead>
+<tbody *ngFor="let f of alldata" ><tr><td>{{f.data}}</td><td>{{f.id}}</td><button class="btn btn-dark" (click)="remove(f.id)">remove</button>
+<button class="btn btn-info" (click)="update(f)">update</button>
+</tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
