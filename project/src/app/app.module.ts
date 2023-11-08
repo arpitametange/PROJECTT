@@ -9,10 +9,12 @@ import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrudComponent } from './crud/crud.component';
-import {  HttpClientModule } from '@angular/common/http';
+import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditComponent } from './crud/edit/edit.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import{MatSnackBarModule} from '@angular/material/snack-bar';
+import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +31,8 @@ import{MatSnackBarModule} from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     HttpClientModule,
     MatDialogModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
