@@ -26,12 +26,26 @@
         <th mat-header-cell *matHeaderCellDef> Email </th>
         <td mat-cell *matCellDef="let element"> {{element.email}} </td>
       </ng-container>
-      
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
- 
+
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef >Action</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="action">
+          <button color="accent" mat-raised-button  (click)="openmatbox()" >
+            Update</button> 
+            <button color="accent" mat-raised-button  (click)="deletevalue(element.id)" >
+              Delete</button>
+          <a mat-button color="accent" disableRipple></a>
+        </mat-cell>
+
+      </ng-container>
+
+
+      <!-- <button color="accent" mat-raised-button  (click)="put(id)" >
+        Update</button> -->
 
         </mat-table>
- 
+      
      </div>
 </div>

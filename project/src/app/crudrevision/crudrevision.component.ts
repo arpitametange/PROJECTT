@@ -13,17 +13,22 @@ import { CrudformComponent } from './crudform/crudform.component';
   styleUrls: ['./crudrevision.component.css']
 })
 export class CrudrevisionComponent implements OnInit {
-  displayedColumns: string[] = ["name", "lname", "email"]; // Columns to display
+  displayedColumns: string[] = ["name", "lname", "email","action"]; // Columns to display
   dataSource = new MatTableDataSource<any>();
   constructor(private service: CrudService,private dialog:MatDialog) {
-
-
   }
   ngOnInit(): void {
     this.get();
   }
-  
+  deletevalue(id:any){
+    this.service.deletemethod(id)
+    // this.get()
+  }
+put(body:any){
+  this.service.putmethod(body).subscribe((res:any)=>{
 
+  })
+}
 
   get() {
     this.service.get().subscribe((res: any) => {
