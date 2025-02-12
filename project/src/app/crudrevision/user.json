@@ -1,0 +1,46 @@
+{
+  "user": [
+    {
+      "id": 12,
+      "name": "arpita",
+      "lname": "metange",
+      "email": "arpitametange@gmail.com"
+    },
+    {
+      "name": "afd",
+      "lname": "dfa",
+      "email": "arpitametange@gmail.com",
+      "id": 13
+    },
+    {
+      "name": "arpita",
+      "lname": "metange",
+      "email": "arpitametange@gmail.com",
+      "id": 14
+    },
+    {
+      "name": "arpita",
+      "lname": "m",
+      "email": "arpitametange@gmail.com",
+      "id": 15
+    },
+    {
+      "name": "arjun",
+      "lname": "bute",
+      "email": "arjunbute@gmail.com",
+      "id": 16
+    },
+    {
+      "name": "fad",
+      "lname": "fda",
+      "email": "afd",
+      "id": 17
+    },
+    {
+      "name": "fsad",
+      "lname": "safd",
+      "email": "dasf",
+      "id": 18
+    }
+  ]
+}

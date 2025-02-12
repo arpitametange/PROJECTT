@@ -28,18 +28,15 @@ export class FormsComponent {
   }
 onsubmit(){
   console.log(this.myreactiveform);
-  
 }
 // Custom ValidatorFn
  validatationforname: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
   // Perform your custom validation logic here
   const value = control.value; // Get the value from the control
-
   // Example validation logic: Check if the value contains the word "NameError"
   if (value && value.includes('arpita@gmail.com')) {
     return { nameError: true }; // Return an object representing the validation error
   }
-
   return null; // Return null when validation passes
 };
 

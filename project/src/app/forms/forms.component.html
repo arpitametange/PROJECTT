@@ -7,7 +7,7 @@
     <small *ngIf="myreactiveform.get('email')?.invalid && myreactiveform.get('email')?.touched">
         Please enter a valid email.
         <small *ngIf="myreactiveform.get('email')?.errors?.['nameError']">
-            arpita@gmail.com not allowed
+            <!-- arpita@gmail.com not allowed -->
         </small>
       </small>
       
@@ -44,3 +44,4 @@
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+<app-newparent></app-newparent>

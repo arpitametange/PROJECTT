@@ -1,0 +1,37 @@
+
+
+<button (click)="openmatbox()">open form</button>
+
+
+<div class="common-table-style">
+ 
+<div class="inner-box">
+    <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef > Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <a mat-button color="accent" disableRipple
+        >
+            {{ element.name | titlecase }}
+          </a>
+        </mat-cell>
+      </ng-container>
+ 
+      <ng-container matColumnDef="lname">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.lname}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+ 
+
+        </mat-table>
+ 
+     </div>
+</div>

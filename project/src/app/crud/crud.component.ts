@@ -20,7 +20,6 @@ get(){
     console.log('get data',res);
     this.alldata=res
     console.log(this.alldata);
-    
   })
 }
 
@@ -28,6 +27,7 @@ get(){
 add(val:any){
   val==this.data1
   console.log(val);
+  
   let data={
     'data':val
   }
@@ -42,7 +42,6 @@ setTimeout(() => {
 
 remove(id:any){
 this.service.removedate(id).subscribe(res=>{
-
 })
 setTimeout(() => {
   this.get()
@@ -55,7 +54,6 @@ let opendiogue=this.dialogue.open(EditComponent,{
 })
 console.log('updated value',data);
 this.service.getdata() ///to get the updated value on the browser
-
 }
 
 }
