@@ -16,4 +16,9 @@
 
 <!-- <app-crud></app-crud> -->
 
-<app-crudrevision></app-crudrevision>
+<!-- <app-crudrevision></app-crudrevision> -->
+
+<h1>Counter: {{ counter$ | async }}</h1>
+    <button (click)="onIncrement()">Increment</button>
+    <button (click)="onIncrement()">Decrement</button>
+    <button (click)="onReset()">Reset</button>

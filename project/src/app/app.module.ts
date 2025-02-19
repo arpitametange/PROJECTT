@@ -49,6 +49,9 @@ import { ChildComponent } from './component/child/child.component';
 import { NewparentComponent } from './newparent/newparent.component';
 import { CrudrevisionComponent } from './crudrevision/crudrevision.component';
 import { CrudformComponent } from './crudrevision/crudform/crudform.component';
+import { NgrxComponent } from './ngrx/ngrx.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './ngrx/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -61,10 +64,12 @@ import { CrudformComponent } from './crudrevision/crudform/crudform.component';
     ChildComponent,
     NewparentComponent,
     CrudrevisionComponent,
-    CrudformComponent
+    CrudformComponent,
+    NgrxComponent
   ],
   imports: [
     BrowserModule,
+    
     AppRoutingModule,
     CdkDrag,
     ReactiveFormsModule,
@@ -103,8 +108,10 @@ import { CrudformComponent } from './crudrevision/crudform/crudform.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatChipsModule
- 
+    MatChipsModule,
+    StoreModule.forRoot({
+      counter: counterReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

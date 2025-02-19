@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CrudService } from './crud.service';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { CrudformComponent } from './crudform/crudform.component';
+import { data } from 'jquery';
  
 @Component({
   selector: 'app-crudrevision',
@@ -21,8 +19,10 @@ export class CrudrevisionComponent implements OnInit {
     this.get();
   }
   deletevalue(id:any){
-    this.service.deletemethod(id)
-    // this.get()
+    this.service.deletemethod(id).subscribe(()=>{
+
+    })
+    this.get()
   }
 put(body:any){
   this.service.putmethod(body).subscribe((res:any)=>{
@@ -37,10 +37,16 @@ put(body:any){
     });
   }
 
-  openmatbox(){
-  this.dialog.open(CrudformComponent, {
+  openmatbox(element?:any){
+  let dialogred=this.dialog.open(CrudformComponent, {
       height: '400px',
       width: '600px',
+      data: element || {} // Pass existing row data or an empty object
+    });
+    dialogred.afterClosed().subscribe((result:any) => {
+      if (result) {
+        this.get(); // Refresh table after update
+      }
     });
   }
 

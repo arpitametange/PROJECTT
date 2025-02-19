@@ -1,6 +1,6 @@
+        <button (click)="openmatbox()">open form</button>
 
 
-<button (click)="openmatbox()">open form</button>
 
 
 <div class="common-table-style">
@@ -32,7 +32,7 @@
       <ng-container matColumnDef="action">
         <mat-header-cell *matHeaderCellDef >Action</mat-header-cell>
         <mat-cell *matCellDef="let element" class="action">
-          <button color="accent" mat-raised-button  (click)="openmatbox()" >
+          <button color="accent" mat-raised-button  (click)="openmatbox(element)" >
             Update</button> 
             <button color="accent" mat-raised-button  (click)="deletevalue(element.id)" >
               Delete</button>

@@ -20,7 +20,10 @@ postmethod(body:any){
 deletemethod(id:any):Observable<any>{
   return this.http.delete(`${this.url}/${id}`)
 }
-  putmethod(body:any){
-    return this.http.put(this.url,body)
-  }
+  
+putmethod(body:any){ 
+  return this.http.put(`${this.url}/${body.id}`,body)
+}
+
+
 }
